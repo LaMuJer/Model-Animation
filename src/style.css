@@ -55,3 +55,22 @@ button {
     box-shadow: 0px 0px 3px 1px var(--white),
         inset 0px 0px 3px 1px var(--white);
 }
+
+@media (max-width: 780px) {
+    button {
+        padding: 2px 10px;
+    }
+}
+@media (max-width: 575px) {
+    .controls-container {
+        inset: auto 0 6% auto;
+        position: absolute;
+    }
+    .controls-box {
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        transform: skewX(-20deg) scale(.8);
+    }
+}

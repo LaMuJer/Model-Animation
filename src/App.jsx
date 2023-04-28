@@ -1,4 +1,4 @@
-import { Suspense } from "react"
+import { Suspense, useState } from "react"
 import { CharacterAnimationProvider } from "./CharacterAnimation"
 import { Canvas } from '@react-three/fiber'
 import Experience from "./Experience"
@@ -7,11 +7,12 @@ import LoadingComponent from "./html/LoadingComponent"
 import LandingSection from "./html/LandingSection"
 
 const App = () => {
+    // Loading 
 
     return (
         <>
-            <LoadingComponent />
             <CharacterAnimationProvider>
+                <LoadingComponent />
                 <Suspense fallback={null}>
                     <LandingSection />
                     <Canvas gl={{ preserveDrawingBuffer: true }}
@@ -23,7 +24,7 @@ const App = () => {
                             position: [- 4, 3, 6]
                         }}
                     >
-                            <Experience />
+                        <Experience />
                     </Canvas>
                     <Controls />
                 </Suspense>

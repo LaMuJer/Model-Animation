@@ -41,7 +41,7 @@ const LoadingComponent = () => {
                     text: "Whatever is coming , don't stop the music",
                     repeat: -1,
                     yoyo: true,
-                    ease: "power2.inOut",                    
+                    ease: "power2.inOut",
                 }, "<")
             if (loadingDone) {
                 gsap.timeline().to(".loading-container", {
@@ -55,6 +55,7 @@ const LoadingComponent = () => {
         return () => ctx.revert()
     }, [loadingDone])
 
+    // Audio Play
     let audioSrc = new Audio("/riri.mp3")
     const handleMusicPlay = () => {
         audioSrc.play()
@@ -70,9 +71,9 @@ const LoadingComponent = () => {
                 <p id={"music"}>Whatever is coming , don't stop the music</p>
                 <p id={"do"}>LET'S DO THIS !!!</p>
                 <div className="loading-progress-box">
-                    <h1>{Math.floor(progress)}%</h1>
+                    <h1 className="progressNum" >{Math.floor(progress)}%</h1>
                 </div>
-                <div className="btn-box" style={{opacity : active ? "0" : "1"}}>
+                <div className="btn-box" style={{ opacity: active ? "0" : "1" }}>
                     <button className="button button--mimas" onClick={handleMusicPlay} >
                         <span>Enter</span>
                     </button>

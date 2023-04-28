@@ -78,8 +78,6 @@ h1 {
     box-shadow: 0px 0px 3px 1px var(--green),
         inset 0px 0px 3px 1px var(--green);
     transform: skewX(-20deg);
-    /* padding: 1.5rem 3rem;
-    margin: 0; */
     display: inline-block;
     transition: 1;
 }
@@ -116,4 +114,40 @@ h1 {
 
 .button--mimas:hover::before {
     transform: translate3d(100%, 0, 0);
+}
+
+@media (max-width: 905px) {
+    .loading-box p {
+        font-size: .7rem;
+    }
+
+    .button {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 690px) {
+
+    .loading-box p:nth-child(2) {
+        inset: 5% auto auto 1%;
+    }
+
+    .loading-box p:nth-child(4) {
+        inset: auto auto 5% 1%;
+    }
+
+    .progressNum {
+        font-size: 5rem !important;
+    }
+
+    .btn-box {
+        left: 26%;
+    }
+}
+
+@media (min-width: 1370px) {
+    .loading-box p {
+        font-size: 1.3rem;
+    }
+
 }

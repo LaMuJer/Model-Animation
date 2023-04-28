@@ -11,7 +11,7 @@ export const CharacterAnimationProvider = (props) => {
         animationIndex,
         setAnimationIndex,
         animations,
-        setAnimations
+        setAnimations,
     }} >
         {props.children}
     </CharacterAnimationContext.Provider>
